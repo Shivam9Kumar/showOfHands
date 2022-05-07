@@ -1,0 +1,42 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "emailId": "typicode",
+      "dept": "typicode",
+      "password": "typicode"
+    },
+    {
+      "id": "1810058",
+      "name": "shivam",
+      "emailId": null,
+      "dept": "CSE",
+      "password": "1234"
+    },
+    {
+      "id": "YanDo8-",
+      "name": null,
+      "emailId": null,
+      "dept": null,
+      "password": null
+    },
+    {
+      "id": "fr",
+      "name": "tr",
+      "emailId": null,
+      "dept": null,
+      "password": null
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
