@@ -24,6 +24,10 @@ export class RegisterComponent implements OnInit {
 
     })
   }
+  back(){
+    this.router.navigateByUrl("");
+  } 
+  
 register(){
   this.http.postRequest("http://localhost:3000/user",this.form.value).then((response:any)=>{
     alert("Registered Successfully");

@@ -20,6 +20,8 @@ import{HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './user/profile/profile.component';
 import { MyProfileComponent } from './admin/my-profile/my-profile.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,8 @@ import { MyProfileComponent } from './admin/my-profile/my-profile.component';
     ViewProposalComponent,
     ProfileComponent,
     MyProfileComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent,
     
   ],
   imports: [

@@ -8,3 +8,10 @@ img{
 ul{
     margin-left: 200px;
 }
+.nav-link{
+    color:red;
+}
+.dash{
+    border: 4px;
+    background-color: aqua;
+}

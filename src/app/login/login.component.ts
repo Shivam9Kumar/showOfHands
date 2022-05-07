@@ -39,5 +39,7 @@ this.router.navigateByUrl("user");
 adminLogin(){
   this.router.navigateByUrl("admin");
 }
-
+back(){
+  this.router.navigateByUrl("");
+}
 }
