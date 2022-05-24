@@ -1,4 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpService } from 'src/app/service/http.service';
 
 @Component({
   selector: 'app-add-event',
@@ -6,10 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-event.component.css']
 })
 export class AddEventComponent implements OnInit {
-
-  constructor() { }
+events:any;
+  constructor(private http:HttpService,private router:Router) { }
 
   ngOnInit(): void {
+    this.events=[];
+    this.getEvents();
+  }
+
+  getEvents(){
+    this.http.getRequest("http://localhost:3000/events").then((response:any)=>{
+      this.events=response;
+    }).catch((error:HttpErrorResponse)=>{
+      console.log(error)
+    })
+  }
+
+  deleteEvent(id:string){
+    this.http.deleteRequest("http://localhost:3000/events/"+id).then((response:any)=>{
+      this.getEvents();
+    }).catch((error:HttpErrorResponse)=>{
+      console.log(error)
+    })
+  }
+
+  addEvent(){
+    this.router.navigate(["/admin/create"])
+
   }
 
 }

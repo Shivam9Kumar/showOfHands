@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-profile.component.css']
 })
 export class MyProfileComponent implements OnInit {
-
+  gender:string;
   constructor() { }
 
   ngOnInit(): void {
+    this.gender='male'
   }
 
 }

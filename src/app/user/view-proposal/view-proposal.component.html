@@ -1,29 +1,16 @@
 <div class="card">
     <div class="card-header">
-        Proposals
+    <h1 class="display-6">Proposals of this Week</h1> 
     </div>
     <div class="card-body row">
-        <div class="col">
-            <h5 class="card-title">To Extend the Working Hours</h5>
-            <p class="card-text">To Complete the targets within Time we are thinking to extend working hours.</p>
-        </div>
-
-        <div class="col">
-            <button href="#" class="btn btn-danger">Not Accepted</button>
+        <div class="col-12" *ngFor="let p of proposal">
+            <h5 class="card-title">{{p.title}}</h5>
+            <p class="card-text">{{p.desc}}</p>
+           
+         <button href="#" class="btn btn-danger">Not Accepted</button>
             <button href="#" class="btn btn-success">Accepted</button>
+            <hr>
         </div>
+       
         </div>
-        <hr>
-        <div class="card-body row">
-            <div class="col">
-                <h5 class="card-title">To increase the number of holidays in a year</h5>
-                <p class="card-text">to maintain the healthy relationship with our employees we are thinking to increase number of holidays in a year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque molestiae laudantium temporibus dolorum at error aperiam asperiores architecto laborum voluptatem sequi incidunt, veniam beatae deleniti voluptate, excepturi fugit modi!</p>
-            </div>
-
-            <div class="col">
-                <button href="#" class="btn btn-danger">Not Accepted</button>
-                <button href="#" class="btn btn-success">Accepted</button>
-            </div>
-
-
         </div>

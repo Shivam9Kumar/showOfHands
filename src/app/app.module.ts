@@ -22,6 +22,12 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { MyProfileComponent } from './admin/my-profile/my-profile.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { DetailsComponent } from './user/view-task/details/details.component';
+import { EventDetailsComponent } from './user/view-event/event-details/event-details.component';
+import { CreateComponent } from './admin/add-event/create/create.component';
+import { AddCandidatesComponent } from './admin/add-event/add-candidates/add-candidates.component';
+import { CreateTaskComponent } from './admin/add-task/create-task/create-task.component';
+import { CreateProposalComponent } from './admin/add-proposal/create-proposal/create-proposal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +47,12 @@ import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.com
     MyProfileComponent,
     AdminDashboardComponent,
     UserDashboardComponent,
+    DetailsComponent,
+    EventDetailsComponent,
+    CreateComponent,
+    AddCandidatesComponent,
+    CreateTaskComponent,
+    CreateProposalComponent,
     
   ],
   imports: [

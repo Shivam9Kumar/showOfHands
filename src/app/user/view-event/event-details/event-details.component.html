@@ -1,0 +1,20 @@
+<div class="main">
+    <h4 class="display-5 text-center">
+       {{event.name}}
+    </h4>
+</div>
+<div>
+    <div class="row">
+        <div class="col-4" *ngFor="let c of candidates">
+            <div class="card" style="width: 18rem;">
+                <img *ngIf="c.gender=='male' " src="./assets/male.png" class="card-img-top" alt="...">
+                <img *ngIf="c.gender=='female' " src="./assets/female.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{c.name}}</h5>
+                  <p class="card-text text-center">
+                  <button class="btn btn-primary text-center">VOTE</button></p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

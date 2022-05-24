@@ -27,6 +27,13 @@
       "emailId": null,
       "dept": null,
       "password": null
+    },
+    {
+      "id": "18323323",
+      "name": "Shivam",
+      "emailId": null,
+      "dept": "CSE",
+      "password": "shivam"
     }
   ],
   "comments": [
@@ -36,7 +43,109 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "task": [
+    {
+      "id": "123456",
+      "assignedTo": "CSE",
+      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
+      "name": "UNIT-1 NLP",
+      "assignedDate": "24-05-2022",
+      "dueDate": "25-05-2022"
+    },
+    {
+      "id": "12345",
+      "assignedTo": "CSE",
+      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
+      "name": "UNIT-2 NLP",
+      "assignedDate": "24-05-2022",
+      "dueDate": "25-05-2022"
+    },
+    {
+      "id": "1234567",
+      "assignedTo": "CSE",
+      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
+      "name": "UNIT-4 NLP",
+      "assignedDate": "24-05-2022",
+      "dueDate": "25-05-2022"
+    }
+  ],
+  "events": [
+    {
+      "id": "446464",
+      "assignedTo": "CSE",
+      "name": "MR.Fresher 2022",
+      "desc": "Who sholud be the MR. Fresher 2022? Vote Now!",
+      "isClosed": false,
+      "closingOn": "28-05-2022",
+      "candidates": [
+        {
+          "id": "545454",
+          "name": "KL Rahul",
+          "totalVotes": 43,
+          "gender": "male"
+        },
+        {
+          "id": "545454",
+          "name": "Virat Kohli",
+          "totalVotes": 47,
+          "gender": "male"
+        },
+        {
+          "id": "545454",
+          "name": "MS Dhoni",
+          "totalVotes": 49,
+          "gender": "male"
+        }
+      ]
+    },
+    {
+      "id": "445656",
+      "assignedTo": "CSE",
+      "name": "Best Dancer CHAKRA 2022",
+      "desc": "Who sholud be the Best Dancer CHAKRA 2022? Vote Now!",
+      "isClosed": false,
+      "closingOn": "28-05-2022",
+      "candidates": [
+        {
+          "id": "554534",
+          "name": "Nora Fatehi",
+          "totalVotes": 433,
+          "gender": "female"
+        },
+        {
+          "id": "435454",
+          "name": "Remo D'Souza",
+          "totalVotes": 407,
+          "gender": "male"
+        },
+        {
+          "id": "4353543",
+          "name": "Rahul Gandhi",
+          "totalVotes": 3,
+          "gender": "male"
+        }
+      ]
+    },
+    {
+      "name": "Ms. Fresher 2022",
+      "desc": "Who will be the",
+      "assignedTo": "CSE",
+      "closingOn": null,
+      "candidates": [],
+      "isClosed": false,
+      "id": "qr82UpX"
+    }
+  ],
+  "proposal": [
+    {
+      "id": "87896",
+      "title": "To Extend the Working Hours",
+      "desc": "To Complete the targets within Time we are thinking to extend working hours."
+    },
+    {
+      "id": "878546",
+      "title": "To increase the number of holidays in a year",
+      "desc": "to maintain the healthy relationship with our employees we are thinking to increase number of holidays in a year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque molestiae laudantium temporibus dolorum at error aperiam asperiores architecto laborum voluptatem sequi incidunt, veniam beatae deleniti voluptate, excepturi fugit modi!"
+    }
+  ]
 }
