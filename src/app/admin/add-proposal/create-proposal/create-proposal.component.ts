@@ -49,12 +49,5 @@ create(){
   })
   
 }
-delete(id:string){
-  this.http.deleteRequest("http://localhost:3000/proposal/"+id).then((response:any)=>{
-   this.back();
-  }).catch((err:HttpErrorResponse)=>{
-    console.log(err);
-  
-  })
-}
+
 }
