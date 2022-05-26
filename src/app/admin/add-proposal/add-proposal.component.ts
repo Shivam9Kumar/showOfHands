@@ -28,7 +28,7 @@ addProposal(){
 } 
 
 deleteProposal(id:string){
-  this.http.deleteRequest("http://localhost:3000/proposal"+id).then((response:any)=>{
+  this.http.deleteRequest("http://localhost:3000/proposal/"+id).then((response:any)=>{
     this.getProposal();
   }).catch((error:HttpErrorResponse)=>{
     console.log(error)

@@ -3,12 +3,13 @@
     <h1 class="display-6">Proposals of this Week</h1> 
     </div>
     <div class="card-body row">
-        <div class="col-12" *ngFor="let p of proposal">
+        <div class="col-12" *ngFor="let p of proposal index as i">
             <h5 class="card-title">{{p.title}}</h5>
             <p class="card-text">{{p.desc}}</p>
-           
-         <button href="#" class="btn btn-danger">Not Accepted</button>
-            <button href="#" class="btn btn-success">Accepted</button>
+           <h5 *ngIf="p.isAccepted" class="text-primary">Accepted!!</h5>
+           <h5 *ngIf="p.isRejected" class="text-danger">Rejected!!</h5>
+         <button  *ngIf="!p.isRejected && !p.isAccepted"  href="#" class="btn btn-danger" (click)="reject(p.id,i)" >Not Accepted</button>
+            <button *ngIf="!p.isRejected && !p.isAccepted" href="#" class="btn btn-success" (click)="accept(p.id,i)">Accepted</button>
             <hr>
         </div>
        

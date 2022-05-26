@@ -13,6 +13,8 @@ export class CreateComponent implements OnInit {
   form:FormGroup;
   candidates:any;
   isClosed:boolean;
+  isVoted:boolean;
+  votedName:String
   constructor(private http:HttpService, private formbuilder:FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
@@ -24,7 +26,9 @@ export class CreateComponent implements OnInit {
       assignedTo:[,Validators.required],
       closingOn:[,Validators.required],
       candidates:[],
-      isClosed:[]
+      isClosed:[],
+      isVoted:[],
+      votedName:[],
 
     })
   }
@@ -35,6 +39,8 @@ export class CreateComponent implements OnInit {
 create(){
   this.form.controls['candidates'].setValue(this.candidates);
   this.form.controls['isClosed'].setValue(this.isClosed);
+  this.form.controls['isVoted'].setValue(this.isVoted);
+  this.form.controls['votedName'].setValue("");
   this.http.postRequest("http://localhost:3000/events",this.form.value).then((response:any)=>{
     alert("Created Successfully");
    this.back();

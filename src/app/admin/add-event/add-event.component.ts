@@ -37,5 +37,23 @@ events:any;
     this.router.navigate(["/admin/create"])
 
   }
+  viewEvent(id:string){
+    this.router.navigate(["/admin/viewEvent"],
+    {
+      queryParams: {
+           id:id,
+       
+      }})
 
+  }
+
+  addCandidate(id:string){
+    this.router.navigate(["/admin/addCandidate"],
+    {
+      queryParams: {
+           id:id,
+       
+      }})
+
+  }
 }

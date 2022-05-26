@@ -22,6 +22,7 @@ import { ViewEventComponent } from './user/view-event/view-event.component';
 import { ViewProposalComponent } from './user/view-proposal/view-proposal.component';
 import { DetailsComponent } from './user/view-task/details/details.component';
 import { ViewTaskComponent } from './user/view-task/view-task.component';
+import { ViewEventAdminComponent } from './admin/add-event/view-event-admin/view-event-admin.component';
 
 const routes: Routes = [
   {
@@ -60,7 +61,7 @@ const routes: Routes = [
     component:ProfileComponent
   },
   {
-    path:"",
+    path:"userDashboard",
     component: UserDashboardComponent
   },
   {
@@ -93,7 +94,7 @@ children:[{
   component: MyProfileComponent
 },
 {
-  path:"",
+  path:"adminDashboard",
   component: AdminDashboardComponent
 },
 {
@@ -103,6 +104,11 @@ children:[{
 {
   path:"addCandidate",
   component: AddCandidatesComponent
+},
+
+{
+  path:"viewEvent",
+  component: ViewEventAdminComponent
 },
 
 {

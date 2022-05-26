@@ -1,4 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { HttpService } from 'src/app/service/http.service';
 
 @Component({
   selector: 'app-create-proposal',
@@ -6,10 +10,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-proposal.component.css']
 })
 export class CreateProposalComponent implements OnInit {
-
-  constructor() { }
+  form:FormGroup;
+  candidates:any;
+  isAccepted:boolean;
+  isRejected:boolean;
+  votedName:String
+  constructor(private http:HttpService, private formbuilder:FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
-  }
+    this.candidates=[];
+    this.isAccepted=false;
+    this.isRejected=false;
+    this.form=this.formbuilder.group({
+      title:[,Validators.required],
+      desc:[,Validators.required],
+      isAccepted:[],
+      isRejected:[],
+    
 
+    })
+  }
+  back(){
+    this.router.navigateByUrl("/admin/addProposal");
+  } 
+  
+create(){
+  
+  this.form.controls['isAccepted'].setValue(this.isAccepted);
+  this.form.controls['isRejected'].setValue(this.isRejected);
+  
+  console.log(this.form.value)
+  this.http.postRequest("http://localhost:3000/proposal",this.form.value).then((response:any)=>{
+    alert("Created Successfully");
+   this.back();
+  }).catch((err:HttpErrorResponse)=>{
+    console.log(err);
+  
+  })
+  
+}
+delete(id:string){
+  this.http.deleteRequest("http://localhost:3000/proposal/"+id).then((response:any)=>{
+   this.back();
+  }).catch((err:HttpErrorResponse)=>{
+    console.log(err);
+  
+  })
+}
 }

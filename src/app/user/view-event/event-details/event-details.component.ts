@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/service/http.service';
 
 @Component({
@@ -12,9 +12,11 @@ export class EventDetailsComponent implements OnInit {
 event:any;
 candidates:any;
 id:string;
-  constructor(private http:HttpService,private route:ActivatedRoute) { }
+totalVotes:number;
+  constructor(private http:HttpService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
+    this.totalVotes=0
     this.event={};
     this.candidates=[];
     this.route.queryParams.subscribe((params: any) => {
@@ -31,5 +33,17 @@ id:string;
     }).catch((error:HttpErrorResponse)=>{
       console.log(error)
     })
+  }
+  vote(name:string,index:number){
+    this.event.isVoted=true;
+    this.event.votedName=name;
+  this.event.candidates[index].totalVotes+=1;
+    this.http.putRequest("http://localhost:3000/events/"+this.id,this.event).then((response:any)=>{
+   alert("Voted Successfully!");
+   this.router.navigateByUrl("/user/viewEvent");
+    }).catch((error:HttpErrorResponse)=>{
+      console.log(error)
+    })
+
   }
 }

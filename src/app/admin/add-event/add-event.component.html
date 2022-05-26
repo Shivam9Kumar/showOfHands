@@ -6,10 +6,9 @@
     <div  *ngFor="let e of events">
         <div >
         <h5 >{{e.name}}</h5>
-        <p >{{e.desc}}</p></div><p class="text-end">Click to See Information</p>
-        <button class="btn btn-warning">+ Add Candidates</button>
-        <button class="btn btn-danger" (click)="deleteEvent(e.id)">Delete</button>
-        
+        <p >{{e.desc}}</p></div><p class="text-end"><button (click)="viewEvent(e.id)" class="btn btn-primary">Click to See more Information</button></p>
+        <button class="btn btn-warning" (click)="addCandidate(e.id)">+ Add Candidates</button>
+        <button class="btn btn-danger" (click)="deleteEvent(e.id)">Close</button>
         <hr>
     
 </div>

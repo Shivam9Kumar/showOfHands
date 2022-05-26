@@ -28,4 +28,21 @@ task:any;
     })
   }
 
+  inProgress(){
+    this.task.inProgress=true;
+    this.http.putRequest("http://localhost:3000/task/"+this.id,this.task).then((response:any)=>{
+    
+    }).catch((error:HttpErrorResponse)=>{
+      console.log(error)
+    })
+  }
+
+completed(){
+  this.task.isCompleted=true;
+  this.http.putRequest("http://localhost:3000/task/"+this.id,this.task).then((response:any)=>{
+  
+  }).catch((error:HttpErrorResponse)=>{
+    console.log(error)
+  })
+}
 }

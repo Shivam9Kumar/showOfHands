@@ -22,5 +22,22 @@ proposal:any;
       console.log(error)
     })
   }
-  
+
+  accept(id:string,index:number){
+    this.proposal[index].isAccepted=true;
+    this.http.putRequest("http://localhost:3000/proposal/"+id,this.proposal[index]).then((response:any)=>{
+    this.getProposal();
+    }).catch((error:HttpErrorResponse)=>{
+      console.log(error)
+    })
+  }
+
+reject(id:string,index:number){
+  this.proposal[index].isRejected=true;
+  this.http.putRequest("http://localhost:3000/proposal/"+id,this.proposal[index]).then((response:any)=>{
+    this.getProposal();
+  }).catch((error:HttpErrorResponse)=>{
+    console.log(error)
+  })
+}
 }

@@ -21,11 +21,12 @@
         <p>{{task.dueDate}}</p>
       </div>
       <div class="text-center ">
-       <h4 class="display-6">0 days Remaining </h4>
+       <h4 class="display-6 text-primary" *ngIf="task.inProgress && !task.isCompleted">Task is in Progress.... </h4>
+       <h4 class="display-6 text-primary" *ngIf="task.isCompleted">This Task is Completed!! </h4>
       </div>
       <hr>
       <div class="text-center ">
-        <button class="btn btn-warning">Mark As In Progress</button>
-        <button class="btn btn-primary">Mark As Completed</button>
+        <button *ngIf="!task.inProgress" class="btn btn-warning" (click)="inProgress()">Mark As In Progress</button>
+        <button *ngIf="!task.isCompleted" class="btn btn-primary" (click)="completed()">Mark As Completed</button>
       </div>
     </div>

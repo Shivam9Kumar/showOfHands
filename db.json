@@ -45,28 +45,24 @@
   ],
   "task": [
     {
-      "id": "123456",
-      "assignedTo": "CSE",
-      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
-      "name": "UNIT-1 NLP",
-      "assignedDate": "24-05-2022",
-      "dueDate": "25-05-2022"
-    },
-    {
       "id": "12345",
       "assignedTo": "CSE",
       "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
       "name": "UNIT-2 NLP",
       "assignedDate": "24-05-2022",
-      "dueDate": "25-05-2022"
+      "dueDate": "25-05-2022",
+      "isCompleted": true,
+      "inProgress": true
     },
     {
-      "id": "1234567",
+      "name": "Unit-4 NLP",
+      "desc": "Complete Whole Syllabus in one Night",
       "assignedTo": "CSE",
-      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
-      "name": "UNIT-4 NLP",
-      "assignedDate": "24-05-2022",
-      "dueDate": "25-05-2022"
+      "assignedDate": "2022-05-27",
+      "dueDate": "2022-05-27",
+      "inProgress": false,
+      "isCompleted": false,
+      "id": "TI_O_9d"
     }
   ],
   "events": [
@@ -75,7 +71,9 @@
       "assignedTo": "CSE",
       "name": "MR.Fresher 2022",
       "desc": "Who sholud be the MR. Fresher 2022? Vote Now!",
+      "isVoted": true,
       "isClosed": false,
+      "votedName": "KL Rahul",
       "closingOn": "28-05-2022",
       "candidates": [
         {
@@ -95,6 +93,16 @@
           "name": "MS Dhoni",
           "totalVotes": 49,
           "gender": "male"
+        },
+        {
+          "name": "Shivam Kumar",
+          "gender": "male",
+          "totalVotes": 0
+        },
+        {
+          "name": "Rahul Singh",
+          "gender": "male",
+          "totalVotes": 0
         }
       ]
     },
@@ -104,12 +112,14 @@
       "name": "Best Dancer CHAKRA 2022",
       "desc": "Who sholud be the Best Dancer CHAKRA 2022? Vote Now!",
       "isClosed": false,
+      "isVoted": true,
+      "votedName": "Nora Fatehi",
       "closingOn": "28-05-2022",
       "candidates": [
         {
           "id": "554534",
           "name": "Nora Fatehi",
-          "totalVotes": 433,
+          "totalVotes": 434,
           "gender": "female"
         },
         {
@@ -131,21 +141,50 @@
       "desc": "Who will be the",
       "assignedTo": "CSE",
       "closingOn": null,
-      "candidates": [],
+      "isVoted": false,
+      "votedName": "",
+      "candidates": [
+        {
+          "name": "Aditi Sharma",
+          "gender": "female",
+          "totalVotes": 0
+        }
+      ],
       "isClosed": false,
       "id": "qr82UpX"
+    },
+    {
+      "name": "dsds",
+      "desc": "dwd",
+      "assignedTo": "CSE",
+      "closingOn": null,
+      "candidates": [],
+      "isClosed": false,
+      "votedName": "",
+      "id": "VCXaGtA"
     }
   ],
   "proposal": [
     {
       "id": "87896",
       "title": "To Extend the Working Hours",
-      "desc": "To Complete the targets within Time we are thinking to extend working hours."
+      "desc": "To Complete the targets within Time we are thinking to extend working hours.",
+      "isAccepted": false,
+      "isRejected": false
     },
     {
       "id": "878546",
       "title": "To increase the number of holidays in a year",
-      "desc": "to maintain the healthy relationship with our employees we are thinking to increase number of holidays in a year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque molestiae laudantium temporibus dolorum at error aperiam asperiores architecto laborum voluptatem sequi incidunt, veniam beatae deleniti voluptate, excepturi fugit modi!"
+      "desc": "to maintain the healthy relationship with our employees we are thinking to increase number of holidays in a year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque molestiae laudantium temporibus dolorum at error aperiam asperiores architecto laborum voluptatem sequi incidunt, veniam beatae deleniti voluptate, excepturi fugit modi!",
+      "isAccepted": false,
+      "isRejected": false
+    },
+    {
+      "title": "Double Diwali Bonus",
+      "desc": "This Year",
+      "isAccepted": false,
+      "isRejected": false,
+      "id": "VxBfHX5"
     }
   ]
 }

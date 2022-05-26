@@ -28,6 +28,7 @@ import { CreateComponent } from './admin/add-event/create/create.component';
 import { AddCandidatesComponent } from './admin/add-event/add-candidates/add-candidates.component';
 import { CreateTaskComponent } from './admin/add-task/create-task/create-task.component';
 import { CreateProposalComponent } from './admin/add-proposal/create-proposal/create-proposal.component';
+import { ViewEventAdminComponent } from './admin/add-event/view-event-admin/view-event-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { CreateProposalComponent } from './admin/add-proposal/create-proposal/cr
     AddCandidatesComponent,
     CreateTaskComponent,
     CreateProposalComponent,
+    ViewEventAdminComponent,
     
   ],
   imports: [
