@@ -41,6 +41,11 @@ export class ViewProposalDetailComponent implements OnInit {
     getProposal(){
       this.http.getRequest("http://localhost:3000/proposal/"+this.id).then((response:any)=>{
         this.proposal=response;
+        this.acceptedBy=this.proposal.acceptedBy;
+        this.rejectedBy=this.proposal.rejectedBy;
+        console.log(this.acceptedBy);
+        console.log(this.rejectedBy);
+        
         this.getUser();
       }).catch((error:HttpErrorResponse)=>{
         console.log(error)

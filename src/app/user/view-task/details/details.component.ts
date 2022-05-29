@@ -40,6 +40,11 @@ mainTask:any;
   getTask(){
     this.http.getRequest("http://localhost:3000/task/"+this.id).then((response:any)=>{
       this.task=response;
+      this.inProgressBy=this.task.inProgressBy;
+      this.completedBy=this.task.completedBy;
+      console.log(this.inProgressBy)
+      console.log(this.completedBy);
+      
     }).catch((error:HttpErrorResponse)=>{
       console.log(error)
     })
@@ -96,12 +101,14 @@ completed(){
      this.userTask.splice(index,1)
     }
   }
-  for(let k of this.task.inProgressBy){
+  for(let k of this.inProgressBy){
     if(k.id==this.globalService.getUniqueId()){
-      let index= this.task.inProgressBy.indexOf(k);
+      let index= this.inProgressBy.indexOf(k);
       console.log(index)
-        this.task.inProgressBy.splice(index,1)
+        this.inProgressBy.splice(index,1)
+     
     }
+    this.task.inProgressBy=this.inProgressBy;
   }
   let data={
     inProgress:false,

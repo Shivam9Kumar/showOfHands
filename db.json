@@ -94,6 +94,158 @@
         }
       ],
       "id": "888"
+    },
+    {
+      "UniqueId": "1822010001",
+      "name": "Abhay",
+      "email": "abhay@gmail.com",
+      "Department": "CSE",
+      "password": "1234",
+      "event": [
+        {
+          "isVoted": true,
+          "votedName": "Sachin",
+          "id": "1"
+        }
+      ],
+      "task": [
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "l-r-Zyy",
+          "name": "Task 2"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "50OM9eK",
+          "name": "dfdgfd"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "hJFWTuC",
+          "name": "fgfhf"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "21fjHd5",
+          "name": "fdfdfdgd55"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "l_Rpwfo",
+          "name": "d443fdgfd"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "UPlX-1j",
+          "name": "dff333333"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "S4PPVvs",
+          "name": "1234"
+        }
+      ],
+      "proposal": [
+        {
+          "isAccepted": true,
+          "id": "oxNKa4G",
+          "name": "Created Proposal"
+        },
+        {
+          "isAccepted": false,
+          "id": "87896",
+          "name": "To Extend the Working Hours"
+        },
+        {
+          "isAccepted": true,
+          "id": "BHRaR9a",
+          "name": "1111111"
+        }
+      ],
+      "id": "1822010001"
+    },
+    {
+      "UniqueId": "1822010003",
+      "name": "Abhishek",
+      "email": "abhishek@gmail.com",
+      "Department": "CSE",
+      "password": "1234",
+      "event": [
+        {
+          "isVoted": true,
+          "votedName": "Shivam Kumar",
+          "id": "1"
+        }
+      ],
+      "task": [
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "l-r-Zyy",
+          "name": "Task 2"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "50OM9eK",
+          "name": "dfdgfd"
+        },
+        {
+          "inProgress": true,
+          "isCompleted": false,
+          "id": "hJFWTuC",
+          "name": "fgfhf"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "21fjHd5",
+          "name": "fdfdfdgd55"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "l_Rpwfo",
+          "name": "d443fdgfd"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "UPlX-1j",
+          "name": "dff333333"
+        },
+        {
+          "inProgress": false,
+          "isCompleted": true,
+          "id": "S4PPVvs",
+          "name": "1234"
+        }
+      ],
+      "proposal": [
+        {
+          "isAccepted": true,
+          "id": "oxNKa4G",
+          "name": "Created Proposal"
+        },
+        {
+          "isAccepted": false,
+          "id": "87896",
+          "name": "To Extend the Working Hours"
+        },
+        {
+          "isAccepted": true,
+          "id": "BHRaR9a",
+          "name": "1111111"
+        }
+      ],
+      "id": "1822010003"
     }
   ],
   "comments": [
@@ -124,96 +276,25 @@
   ],
   "events": [
     {
-      "id": "446464",
+      "name": "Mr. Fresher",
+      "desc": "jkgfjgfjsgfkjrwbgjkrwhgjrhgkjrhgkjrh",
       "assignedTo": "CSE",
-      "name": "MR.Fresher 2022",
-      "desc": "Who sholud be the MR. Fresher 2022? Vote Now!",
-      "isVoted": true,
-      "isClosed": false,
-      "votedName": "Shivam Kumar",
-      "closingOn": "28-05-2022",
+      "closingOn": null,
       "candidates": [
-        {
-          "id": "545454",
-          "name": "KL Rahul",
-          "totalVotes": 43,
-          "gender": "male"
-        },
-        {
-          "id": "545454",
-          "name": "Virat Kohli",
-          "totalVotes": 47,
-          "gender": "male"
-        },
-        {
-          "id": "545454",
-          "name": "MS Dhoni",
-          "totalVotes": 49,
-          "gender": "male"
-        },
         {
           "name": "Shivam Kumar",
           "gender": "male",
-          "totalVotes": 3
+          "totalVotes": 1
         },
         {
-          "name": "Rahul Singh",
+          "name": "Sachin",
           "gender": "male",
-          "totalVotes": 0
-        }
-      ]
-    },
-    {
-      "id": "445656",
-      "assignedTo": "CSE",
-      "name": "Best Dancer CHAKRA 2022",
-      "desc": "Who sholud be the Best Dancer CHAKRA 2022? Vote Now!",
-      "isClosed": false,
-      "isVoted": true,
-      "votedName": "Nora Fatehi",
-      "closingOn": "28-05-2022",
-      "candidates": [
-        {
-          "id": "554534",
-          "name": "Nora Fatehi",
-          "totalVotes": 436,
-          "gender": "female"
-        },
-        {
-          "id": "435454",
-          "name": "Remo D'Souza",
-          "totalVotes": 407,
-          "gender": "male"
-        },
-        {
-          "id": "4353543",
-          "name": "Rahul Gandhi",
-          "totalVotes": 3,
-          "gender": "male"
-        }
-      ]
-    },
-    {
-      "name": "Ms. Fresher 2022",
-      "desc": "Who will be the",
-      "assignedTo": "CSE",
-      "closingOn": null,
-      "isVoted": false,
-      "votedName": "Aditi Sharma",
-      "candidates": [
-        {
-          "name": "Aditi Sharma",
-          "gender": "female",
-          "totalVotes": 4
-        },
-        {
-          "name": "Amrita Kadyan",
-          "gender": "female",
           "totalVotes": 1
         }
       ],
       "isClosed": false,
-      "id": "qr82UpX"
+      "votedName": "",
+      "id": 1
     }
   ],
   "proposal": [
@@ -228,60 +309,45 @@
           "id": "888",
           "name": "shiva"
         }
-      ]
-    },
-    {
-      "id": "878546",
-      "title": "To increase the number of holidays in a year",
-      "desc": "to maintain the healthy relationship with our employees we are thinking to increase number of holidays in a year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque molestiae laudantium temporibus dolorum at error aperiam asperiores architecto laborum voluptatem sequi incidunt, veniam beatae deleniti voluptate, excepturi fugit modi!",
-      "isAccepted": true,
-      "isRejected": false,
+      ],
       "rejectedBy": [
         {
-          "id": "888",
-          "name": "shiva"
+          "id": "1822010003",
+          "name": "Abhishek"
         }
       ]
     },
     {
-      "title": "Double Diwali Bonus",
-      "desc": "This Year",
-      "isAccepted": true,
-      "isRejected": false,
-      "id": "VxBfHX5",
-      "rejectedBy": [
-        {
-          "id": "888",
-          "name": "shiva"
-        }
-      ]
-    },
-    {
-      "title": "dgfg",
-      "desc": "dgfdg",
+      "title": "Created Proposal",
+      "desc": "proposal Created",
       "isAccepted": false,
       "isRejected": false,
-      "id": "GP8EZGh",
       "acceptedBy": [
         {
-          "id": "888",
-          "name": "shiva"
-        }
-      ]
-    },
-    {
-      "title": "newProposal",
-      "desc": "fdfdf",
-      "isAccepted": false,
-      "isRejected": false,
-      "acceptedBy": [],
-      "rejectedBy": [
-        {
-          "id": "888",
-          "name": "shiva"
+          "id": "1822010003",
+          "name": "Abhishek"
         }
       ],
-      "id": "DDBNGLK"
+      "rejectedBy": [],
+      "id": "oxNKa4G"
+    },
+    {
+      "title": "1111111",
+      "desc": "111111",
+      "isAccepted": false,
+      "isRejected": false,
+      "acceptedBy": [
+        {
+          "id": "1822010001",
+          "name": "Abhay"
+        },
+        {
+          "id": "1822010003",
+          "name": "Abhishek"
+        }
+      ],
+      "rejectedBy": [],
+      "id": "BHRaR9a"
     }
   ]
 }
