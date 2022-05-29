@@ -34,4 +34,15 @@ deleteProposal(id:string){
     console.log(error)
   })
 } 
+
+viewProposal(id:string){
+  this.router.navigate(["/admin/viewProposalAdmin"],
+  {
+    queryParams: {
+         id:id,
+     
+    }})
+
+
+}
 }

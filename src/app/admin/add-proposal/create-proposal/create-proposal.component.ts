@@ -14,11 +14,13 @@ export class CreateProposalComponent implements OnInit {
   candidates:any;
   isAccepted:boolean;
   isRejected:boolean;
-  votedName:String
+  votedName:String;
+  blankArray:any;
   constructor(private http:HttpService, private formbuilder:FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
     this.candidates=[];
+    this.blankArray=[]
     this.isAccepted=false;
     this.isRejected=false;
     this.form=this.formbuilder.group({
@@ -26,6 +28,8 @@ export class CreateProposalComponent implements OnInit {
       desc:[,Validators.required],
       isAccepted:[],
       isRejected:[],
+      acceptedBy:[],
+      rejectedBy:[]
     
 
     })
@@ -38,7 +42,8 @@ create(){
   
   this.form.controls['isAccepted'].setValue(this.isAccepted);
   this.form.controls['isRejected'].setValue(this.isRejected);
-  
+  this.form.controls['acceptedBy'].setValue(this.blankArray);
+  this.form.controls['rejectedBy'].setValue(this.blankArray);
   console.log(this.form.value)
   this.http.postRequest("http://localhost:3000/proposal",this.form.value).then((response:any)=>{
     alert("Created Successfully");

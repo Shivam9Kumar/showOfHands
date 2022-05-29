@@ -16,10 +16,16 @@ export class LoginComponent implements OnInit {
 asUser:boolean=false;
 asAdmin:boolean=false;
 type:string='';
-form:FormGroup
+form:FormGroup;
+adminForm:FormGroup;
   ngOnInit(): void {
     this.form=this.formbuilder.group({
       UniqueId:[,Validators.required],
+       password:[,Validators.required],
+ 
+     })
+     this.adminForm=this.formbuilder.group({
+      adminId:[,Validators.required],
        password:[,Validators.required],
  
      })
@@ -47,7 +53,7 @@ userLogin(){
   this.http.postRequest("http://localhost:8000/login",this.form.value).then((response:any)=>{
     if(response.user){
     alert("Login Successfully");
-this.globalService.setInformation(response.user_id,response.user);
+this.globalService.setInformation(response.user_id,response.user,this.form.value.UniqueId);
 this.router.navigateByUrl("user/userDashboard");}
 else{
   alert("Login Failed... Enter Correct Credentials");
@@ -59,7 +65,11 @@ else{
 
 }
 adminLogin(){
-  this.router.navigateByUrl("admin/adminDashboard");
+if(this.adminForm.value.adminId=='admin'&& this.adminForm.value.password=='admin' ){
+  this.router.navigateByUrl("admin/adminDashboard");}
+  else{
+    alert("INVALID CREDENTIALS");
+  }
 }
 back(){
   this.router.navigateByUrl("");

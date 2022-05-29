@@ -1,5 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { GlobalServiceService } from 'src/app/service/global-service.service';
 import { HttpService } from 'src/app/service/http.service';
 
 @Component({
@@ -9,9 +11,17 @@ import { HttpService } from 'src/app/service/http.service';
 })
 export class ViewProposalComponent implements OnInit {
 proposal:any;
-  constructor(private http:HttpService) { }
+user:any;
+acceptedBy:any;
+rejectedBy:any;
+userProposal:any;
+  constructor(private http:HttpService,private globalService:GlobalServiceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.user={};
+    this.acceptedBy=[];
+    this.userProposal=[];
+    this.rejectedBy=[];
     this.proposal=[];
     this.getProposal();
   }
@@ -22,22 +32,13 @@ proposal:any;
       console.log(error)
     })
   }
-
-  accept(id:string,index:number){
-    this.proposal[index].isAccepted=true;
-    this.http.putRequest("http://localhost:3000/proposal/"+id,this.proposal[index]).then((response:any)=>{
-    this.getProposal();
-    }).catch((error:HttpErrorResponse)=>{
-      console.log(error)
-    })
+  viewProposal(id:string){
+    this.router.navigate(["/user/viewProposalDetail"],
+  {
+    queryParams: {
+         id:id,
+     
+    }})
   }
-
-reject(id:string,index:number){
-  this.proposal[index].isRejected=true;
-  this.http.putRequest("http://localhost:3000/proposal/"+id,this.proposal[index]).then((response:any)=>{
-    this.getProposal();
-  }).catch((error:HttpErrorResponse)=>{
-    console.log(error)
-  })
-}
+  
 }

@@ -15,9 +15,11 @@ export class CreateTaskComponent implements OnInit {
   inProgress:boolean;
   isCompleted:boolean;
   votedName:String
+  blankArray:any;
   constructor(private http:HttpService, private formbuilder:FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
+    this.blankArray=[];
     this.candidates=[];
     this.isCompleted=false;
     this.inProgress=false;
@@ -29,6 +31,8 @@ export class CreateTaskComponent implements OnInit {
       dueDate:[],
       inProgress:[],
       isCompleted:[],
+      inProgressBy:[],
+      completedBy:[],
     
 
     })
@@ -41,6 +45,8 @@ create(){
   
   this.form.controls['isCompleted'].setValue(this.isCompleted);
   this.form.controls['inProgress'].setValue(this.inProgress);
+  this.form.controls['completedBy'].setValue(this.blankArray);
+  this.form.controls['inProgressBy'].setValue(this.blankArray);
   
   console.log(this.form.value)
   this.http.postRequest("http://localhost:3000/task",this.form.value).then((response:any)=>{

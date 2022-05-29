@@ -1,4 +1,5 @@
 <div class="main">
+  <div class="col-3"><button type="button" class="btn btn-dark" (click)="back()"> &lt;Back </button></div>
     <h4 class="display-5 text-center">
         Task Details
     </h4>
@@ -21,12 +22,12 @@
         <p>{{task.dueDate}}</p>
       </div>
       <div class="text-center ">
-       <h4 class="display-6 text-primary" *ngIf="task.inProgress && !task.isCompleted">Task is in Progress.... </h4>
-       <h4 class="display-6 text-primary" *ngIf="task.isCompleted">This Task is Completed!! </h4>
+       <h4 class="display-6 text-primary" *ngIf="mainTask.inProgress">Task is in Progress.... </h4>
+       <h4 class="display-6 text-primary" *ngIf="mainTask.isCompleted">This Task is Completed!! </h4>
       </div>
       <hr>
       <div class="text-center ">
-        <button *ngIf="!task.inProgress" class="btn btn-warning" (click)="inProgress()">Mark As In Progress</button>
-        <button *ngIf="!task.isCompleted" class="btn btn-primary" (click)="completed()">Mark As Completed</button>
+        <button *ngIf="!mainTask.inProgress && !mainTask.isCompleted " class="btn btn-warning" (click)="inProgress()">Mark As In Progress</button>
+        <button *ngIf="!mainTask.isCompleted" class="btn btn-primary" (click)="completed()">Mark As Completed</button>
       </div>
     </div>

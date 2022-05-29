@@ -23,6 +23,9 @@ import { ViewProposalComponent } from './user/view-proposal/view-proposal.compon
 import { DetailsComponent } from './user/view-task/details/details.component';
 import { ViewTaskComponent } from './user/view-task/view-task.component';
 import { ViewEventAdminComponent } from './admin/add-event/view-event-admin/view-event-admin.component';
+import { ViewTaskAdminComponent } from './admin/add-task/view-task-admin/view-task-admin.component';
+import { ViewProposalAdminComponent } from './admin/add-proposal/view-proposal-admin/view-proposal-admin.component';
+import { ViewProposalDetailComponent } from './user/view-proposal/view-proposal-detail/view-proposal-detail.component';
 
 const routes: Routes = [
   {
@@ -72,6 +75,10 @@ const routes: Routes = [
     path:"eventDetail",
     component:EventDetailsComponent
   },
+  {
+    path:"viewProposalDetail",
+    component:ViewProposalDetailComponent
+  },
 
 ] }
 ,{
@@ -120,6 +127,16 @@ children:[{
   path:"createProposal",
   component: CreateProposalComponent
 },
+
+{
+  path:"viewTaskAdmin",
+  component: ViewTaskAdminComponent
+},
+
+{
+  path:"viewProposalAdmin",
+  component: ViewProposalAdminComponent
+}
 ]}
 ];
 

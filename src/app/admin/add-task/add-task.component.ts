@@ -33,4 +33,17 @@ deleteTask(id:string){
     console.log(error)
   })
 } 
+
+viewTask(id:string){
+  
+    this.router.navigate(["/admin/viewTaskAdmin"],
+    {
+      queryParams: {
+           id:id,
+       
+      }})
+
+  
+
+}
 }

@@ -21,16 +21,16 @@
     </form>
 </div>
 <div class="box row" *ngIf="asAdmin">
-    <form>
+    <form [formGroup]="adminForm" (ngSubmit)="adminLogin()">
         <div class="row">
             <h6 class="text-dark">Admin ID:</h6>
             <div class="row-3">
-            <input type="id"></div>
+            <input type="id" formControlName="adminId"></div>
         </div>
         <div class="row">
             <h6 class="text-dark button">Password:</h6>
             <div class="col">
-            <input type="password"></div>
+            <input type="password" formControlName="password"></div>
         </div>
         <br>
         <button type="button" class="btn btn-dark" (click)="adminLogin()"> Login</button>

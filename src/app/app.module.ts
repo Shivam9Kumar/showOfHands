@@ -29,6 +29,9 @@ import { AddCandidatesComponent } from './admin/add-event/add-candidates/add-can
 import { CreateTaskComponent } from './admin/add-task/create-task/create-task.component';
 import { CreateProposalComponent } from './admin/add-proposal/create-proposal/create-proposal.component';
 import { ViewEventAdminComponent } from './admin/add-event/view-event-admin/view-event-admin.component';
+import { ViewTaskAdminComponent } from './admin/add-task/view-task-admin/view-task-admin.component';
+import { ViewProposalAdminComponent } from './admin/add-proposal/view-proposal-admin/view-proposal-admin.component';
+import { ViewProposalDetailComponent } from './user/view-proposal/view-proposal-detail/view-proposal-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +58,9 @@ import { ViewEventAdminComponent } from './admin/add-event/view-event-admin/view
     CreateTaskComponent,
     CreateProposalComponent,
     ViewEventAdminComponent,
+    ViewTaskAdminComponent,
+    ViewProposalAdminComponent,
+    ViewProposalDetailComponent,
     
   ],
   imports: [

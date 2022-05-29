@@ -34,6 +34,66 @@
       "emailId": null,
       "dept": "CSE",
       "password": "shivam"
+    },
+    {
+      "UniqueId": "12345678",
+      "name": "Shivam",
+      "email": "check@gmail.com",
+      "Department": "CSE",
+      "password": "1234",
+      "event": [],
+      "task": [],
+      "proposal": [],
+      "id": "A5c0x3m"
+    },
+    {
+      "id": "111111"
+    },
+    {
+      "proposal": [
+        {
+          "isAccepted": true,
+          "id": "87896",
+          "name": "To Extend the Working Hours"
+        }
+      ],
+      "id": "999"
+    },
+    {
+      "UniqueId": "888",
+      "name": "shiva",
+      "email": "888@gmail.com",
+      "Department": "CSE",
+      "password": "1234",
+      "event": [],
+      "task": [],
+      "proposal": [
+        {
+          "isAccepted": true,
+          "id": "87896",
+          "name": "To Extend the Working Hours"
+        },
+        {
+          "isAccepted": false,
+          "id": "878546"
+        },
+        {
+          "isAccepted": false,
+          "id": "VxBfHX5",
+          "name": "Double Diwali Bonus"
+        },
+        {
+          "isAccepted": false,
+          "id": "DDBNGLK",
+          "name": "newProposal"
+        },
+        {
+          "isAccepted": true,
+          "id": "GP8EZGh",
+          "name": "dgfg"
+        }
+      ],
+      "id": "888"
     }
   ],
   "comments": [
@@ -45,24 +105,21 @@
   ],
   "task": [
     {
-      "id": "12345",
+      "name": "latestTask",
+      "desc": "task to complete",
       "assignedTo": "CSE",
-      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime dolorem tenetur consequuntur aperiam voluptatem perspiciatis repellendus, debitis dolores deserunt commodi similique nostrum porro, accusantium temporibus voluptates mollitia voluptate ad. ",
-      "name": "UNIT-2 NLP",
-      "assignedDate": "24-05-2022",
-      "dueDate": "25-05-2022",
-      "isCompleted": true,
-      "inProgress": true
-    },
-    {
-      "name": "Unit-4 NLP",
-      "desc": "Complete Whole Syllabus in one Night",
-      "assignedTo": "CSE",
-      "assignedDate": "2022-05-27",
-      "dueDate": "2022-05-27",
+      "assignedDate": "2022-05-29",
+      "dueDate": "2022-06-01",
       "inProgress": false,
       "isCompleted": false,
-      "id": "TI_O_9d"
+      "inProgressBy": [],
+      "completedBy": [
+        {
+          "id": "999",
+          "name": "shiv"
+        }
+      ],
+      "id": "l6QC0H_"
     }
   ],
   "events": [
@@ -73,7 +130,7 @@
       "desc": "Who sholud be the MR. Fresher 2022? Vote Now!",
       "isVoted": true,
       "isClosed": false,
-      "votedName": "KL Rahul",
+      "votedName": "Shivam Kumar",
       "closingOn": "28-05-2022",
       "candidates": [
         {
@@ -97,7 +154,7 @@
         {
           "name": "Shivam Kumar",
           "gender": "male",
-          "totalVotes": 0
+          "totalVotes": 3
         },
         {
           "name": "Rahul Singh",
@@ -119,7 +176,7 @@
         {
           "id": "554534",
           "name": "Nora Fatehi",
-          "totalVotes": 434,
+          "totalVotes": 436,
           "gender": "female"
         },
         {
@@ -142,26 +199,21 @@
       "assignedTo": "CSE",
       "closingOn": null,
       "isVoted": false,
-      "votedName": "",
+      "votedName": "Aditi Sharma",
       "candidates": [
         {
           "name": "Aditi Sharma",
           "gender": "female",
-          "totalVotes": 0
+          "totalVotes": 4
+        },
+        {
+          "name": "Amrita Kadyan",
+          "gender": "female",
+          "totalVotes": 1
         }
       ],
       "isClosed": false,
       "id": "qr82UpX"
-    },
-    {
-      "name": "dsds",
-      "desc": "dwd",
-      "assignedTo": "CSE",
-      "closingOn": null,
-      "candidates": [],
-      "isClosed": false,
-      "votedName": "",
-      "id": "VCXaGtA"
     }
   ],
   "proposal": [
@@ -170,21 +222,66 @@
       "title": "To Extend the Working Hours",
       "desc": "To Complete the targets within Time we are thinking to extend working hours.",
       "isAccepted": false,
-      "isRejected": false
+      "isRejected": true,
+      "acceptedBy": [
+        {
+          "id": "888",
+          "name": "shiva"
+        }
+      ]
     },
     {
       "id": "878546",
       "title": "To increase the number of holidays in a year",
       "desc": "to maintain the healthy relationship with our employees we are thinking to increase number of holidays in a year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque molestiae laudantium temporibus dolorum at error aperiam asperiores architecto laborum voluptatem sequi incidunt, veniam beatae deleniti voluptate, excepturi fugit modi!",
-      "isAccepted": false,
-      "isRejected": false
+      "isAccepted": true,
+      "isRejected": false,
+      "rejectedBy": [
+        {
+          "id": "888",
+          "name": "shiva"
+        }
+      ]
     },
     {
       "title": "Double Diwali Bonus",
       "desc": "This Year",
+      "isAccepted": true,
+      "isRejected": false,
+      "id": "VxBfHX5",
+      "rejectedBy": [
+        {
+          "id": "888",
+          "name": "shiva"
+        }
+      ]
+    },
+    {
+      "title": "dgfg",
+      "desc": "dgfdg",
       "isAccepted": false,
       "isRejected": false,
-      "id": "VxBfHX5"
+      "id": "GP8EZGh",
+      "acceptedBy": [
+        {
+          "id": "888",
+          "name": "shiva"
+        }
+      ]
+    },
+    {
+      "title": "newProposal",
+      "desc": "fdfdf",
+      "isAccepted": false,
+      "isRejected": false,
+      "acceptedBy": [],
+      "rejectedBy": [
+        {
+          "id": "888",
+          "name": "shiva"
+        }
+      ],
+      "id": "DDBNGLK"
     }
   ]
 }

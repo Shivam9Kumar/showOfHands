@@ -1,14 +1,15 @@
 <div class="main">
+    <div class="col-3"><button type="button" class="btn btn-dark" (click)="back()"> &lt;Back </button></div>
     <h4 class="display-5 text-center">
        {{event.name}}
     </h4>
 </div>
-<div *ngIf="event.isVoted" >
+<div *ngIf="isVoted" >
     <div class="row">
        
                   <h5 class="card-title text-center">You Have Already Voted!!</h5>
                   <h5  class=" display-6 card-text text-center">
-                  YOU VOTED {{event.votedName}}</h5>
+                  YOU VOTED {{voteDetail.votedName}}</h5>
                
         </div>
     </div>
@@ -21,7 +22,7 @@
                 <div class="card-body">
                   <h5 class="card-title text-center">{{c.name}}</h5>
                   <p class="card-text text-center">
-                  <button *ngIf="!event.isVoted" class="btn btn-primary text-center" (click)="vote(c.name,i)">VOTE</button></p>
+                  <button *ngIf="!isVoted" class="btn btn-primary text-center" (click)="vote(c.name,i)">VOTE</button></p>
                 </div>
               </div>
         </div>
